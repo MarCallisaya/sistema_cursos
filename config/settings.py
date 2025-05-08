@@ -115,6 +115,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 #'usuarios' no referimos a la carpeta y luego la clase Usuario
+#autenticador
 AUTH_USER_MODEL = 'usuarios.Usuario'
 
 # Internationalization

@@ -18,3 +18,10 @@ class Usuario(AbstractUser):
 
 #creamos las demas tablas 
 #Tablas para estudiante, profesor, administrador
+class Estudiante(models.Model):
+    usuario = models.OneToOneField('usuarios.Usuario', on_delete=models.CASCADE)
+    ci = models.CharField(max_length=15, unique=True)
+    celular = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.ci

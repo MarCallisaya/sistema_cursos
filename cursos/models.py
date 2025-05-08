@@ -20,5 +20,9 @@ class Inscripcion(models.Model):
 
     fecha_inscripcion = models.DateField(auto_now_add=True)
 
+#Validacion de curso, no permite registrar otra vez en el curso
+    class Meta: 
+        unique_together = ('estudiante','curso')
+
     def __str__(self):
         return f"{self.estudiante.username} Inscrito en: {self.curso.nombre}"

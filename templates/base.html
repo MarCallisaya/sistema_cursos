@@ -1,4 +1,4 @@
-{% comment %} <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,6 @@
             <div class="ms-auto">
                 {% if user.is_authenticated %}
                     <span>{{user.username}}</span>
-                    <a href=""></a>
                     <button type="button" class="btn btn-light waves-effect"><a href=" {% url 'logout' %} "></a></button>
                 {% endif %}
             </div>
@@ -26,4 +25,4 @@
         </div>
     </nav>
 </body>
-</html> {% endcomment %}
+</html> 
